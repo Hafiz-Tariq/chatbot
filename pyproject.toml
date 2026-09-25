@@ -1,0 +1,20 @@
+[project]
+name = "ai"
+version = "0.1.0"
+description = "Local AI Chat Frontend for Ollama"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ollama>=0.6.2",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "pydantic>=2.10.0",
+]
+
+[project.scripts]
+ai = "ai:main"
+ai-server = "ai.server:run"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
